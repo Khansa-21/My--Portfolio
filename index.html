@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/style.css" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Background Video -->
+    <video src="/assets/bg-video2.mp4" loop autoplay muted plays-inline></video>
+
+    <div class="body">
+      <!-- Sidebar Icons -->
+      <div class="icons">
+        <div class="ist iconbox_2" id="icon_s">
+          <i class="bx bx-menu" id="icon"></i>
+        </div>
+        <br />
+
+        <div class="ist iconbox_2" id="icon_s">
+          <i class="bx bx-sun" id="icon"></i>
+          <i class="bx bx-moon" id="icon" style="display: none"></i>
+        </div>
+        <br />
+
+        <div class="iconbox_3 ist" id="icon_s">
+          <i
+            class="bx bx-user-circle"
+            id="icon"
+            title="About"
+            style="margin-top: 17px"
+          ></i
+          ><br />
+          <i class="bx bx-bulb" id="icon" title="Skills"></i><br />
+          <i class="bx bx-wrench" id="icon" title="Services"></i><br />
+          <i class="bx bx-folder-open" id="icon" title="Projects"></i><br />
+          <i class="bx bx-receipt" id="icon"></i><br />
+          <i class="bx bx-paper-plane" id="icon" title="Contact"></i>
+        </div>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="image_section ist">
+        <div class="carasouel"></div>
+
+        <div class="name-section">
+          <div class="img">
+            <img
+              id="profile"
+              src="/assets/pic.jpg"
+              alt="Profile Picture of Khansa Ehsan"
+            />
+          </div>
+
+          <div class="name">Khansa Ehsan</div>
+          <div id="profession"></div>
+
+          <!-- Social Icons -->
+          <div style="text-align: center; margin-top: 20px">
+            <i class="bx bxl-github" id="icon"></i>
+            <i class="bx bxl-linkedin-square" id="icon"></i>
+            <i class="bx bxl-facebook-square" id="icon"></i>
+          </div>
+        </div>
+
+        <!-- Download/Contact Buttons -->
+        <div class="download">
+          <div>
+            <a href="./assets/Khansa_E_Resume.pdf" download>Download CV</a>
+          </div>
+          <div
+            style="
+              width: 2px;
+              background-color: var(--primary-color);
+              height: 100%;
+              margin: 0 10px;
+            "
+          ></div>
+          <div><a href="javascript:void(0)">Contact Me</a></div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main_scroll ist layout">
+        <h2>Hello, I'm <span id="name-slide">Khansa Ehsan</span></h2>
+
+        <div class="about">
+          <h1>
+            Expert in SEO and
+            <div id="spaned"><span>Full Stack</span></div>
+            Development Based in Lahore, Pakistan
+          </h1>
+
+          <p>
+            Passionate about creating innovative solutions and bringing ideas to
+            life through code. Specialized in modern web technologies and
+            user-centered design. Building amazing digital experiences with
+            modern technologies.
+          </p>
+
+          <button id="btn">View My Work</button>
+
+          <!-- Stats & Code Snippet -->
+          <div class="count">
+            <div class="stat-card">
+              <div class="stat-number" data-target="2" data-symbol="+">0</div>
+              <div class="stat-label">Years of Experience</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number" data-target="100" data-symbol="%">0</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+
+            <div class="code-snippet">
+              const developer = {<br />
+              &nbsp;&nbsp;name: "KHANSA EHSAN",<br />
+              &nbsp;&nbsp;skills: ["React", "Node.js", "Mongodb"],<br />
+              &nbsp;&nbsp;passion: "Creating amazing web experiences"<br />
+              };
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Skills -->
+      <div class="skills layout ist">
+        <h2>My Skills</h2>
+        <div class="tech flex">
+          <!-- SKILL BARS -->
+
+          <div class="tech-item">
+            <h3>Frontend</h3>
+            <div class="tech-list">
+              <div class="flex">
+                <img
+                  src="./assets/html-css.png"
+                  alt="html-css-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">HTML/CSS</p>
+                <span
+                  class="progress-count stat-number"
+                  data-target="95"
+                  data-symbol="%"
+                  style="color: var(--primary-color)"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="95" class="progress-bar"></div>
+              </div>
+              <br />
+              <div class="flex">
+                <img
+                  src="./assets/React-icon.png"
+                  alt="React-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">React</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 185px; color: var(--primary-color)"
+                  data-target="80"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="80" class="progress-bar"></div>
+              </div>
+              <br />
+              <div class="flex">
+                <img src="./assets/js.png" alt="JS-icon" class="tech-icons" />
+                <p style="margin-left: 5px">JavaScript</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 150px; color: var(--primary-color)"
+                  data-target="80"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="80" class="progress-bar"></div>
+              </div>
+              <br />
+              <div class="flex">
+                <img
+                  src="./assets/wordpress.png"
+                  alt="wordpress-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">Wordpress</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 150px; color: var(--primary-color)"
+                  data-target="70"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="70" class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <h3>Backend</h3>
+            <div class="tech-list">
+              <div class="flex">
+                <img
+                  src="./assets/node.png"
+                  alt="node-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">Node js</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 160px; color: var(--primary-color)"
+                  data-target="70"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="70" class="progress-bar"></div>
+              </div>
+              <h3 style="margin-left: 10px">Database</h3>
+              <br />
+              <div class="flex">
+                <img
+                  src="./assets/mongo.png"
+                  alt="Mongodb-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">MongoDB</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 150px; color: var(--primary-color)"
+                  data-target="70"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="70" class="progress-bar"></div>
+              </div>
+              <h3 style="margin-left: 10px">Python</h3>
+              <br />
+              <div class="flex">
+                <img
+                  src="./assets/pyt.png"
+                  alt="Python-icon"
+                  class="tech-icons"
+                />
+                <p style="margin-left: 5px">Python</p>
+                <span
+                  class="progress-count stat-number"
+                  style="margin-left: 165px; color: var(--primary-color)"
+                  data-target="60"
+                  data-symbol="%"
+                  >0</span
+                >
+              </div>
+              <div class="progress">
+                <div data-percent="60" class="progress-bar"></div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+        <div class="tools">
+          <h3>Tool Stack</h3>
+          <div class="stack">
+            <!-- TOOLS -->
+
+            <div class="tool-1 t-3">
+              <img
+                src="./assets/VS.png"
+                alt="Visual Studio icon"
+                class="tool-icons"
+              />
+              <p>
+                Visual Studio <br />
+                <br />
+                <span
+                  class="stat-number"
+                  data-target="95"
+                  data-symbol="%"
+                  style="font-size: 18px; color: var(--primary-color)"
+                  >0</span
+                >
+              </p>
+            </div>
+            <div class="tool-1 t-1">
+              <img
+                src="./assets/Chatgpt.png"
+                alt="Chatgpt icon"
+                class="tool-icons"
+                caption="chatgpt"
+              />
+              <!-- <p class="count" data-target="80" data-symbol="%">0</p> -->
+              <p>
+                ChatGPT <br />
+                <br />
+                <span
+                  class="stat-number"
+                  data-target="80"
+                  data-symbol="%"
+                  style="font-size: 18px; color: var(--primary-color)"
+                  >0</span
+                >
+              </p>
+            </div>
+            <div class="tool-1 t-4">
+              <img
+                src="./assets/canva.png"
+                alt="Canva icon"
+                class="tool-icons"
+              />
+              <!-- <p class="count" data-target="70" data-symbol="%">0</p> -->
+              <p>
+                Canva <br />
+                <br />
+                <span
+                  class="stat-number"
+                  data-target="70"
+                  data-symbol="%"
+                  style="font-size: 18px; color: var(--primary-color)"
+                  >0</span
+                >
+              </p>
+            </div>
+            <div class="tool-1 t-3">
+              <img
+                src="./assets/claud-ai.png"
+                alt="Claude-ai icon"
+                class="tool-icons"
+              />
+              <!-- <p class="count" data-target="65" data-symbol="%">0</p> -->
+              <p>
+                Claude-ai <br />
+                <br />
+                <span
+                  class="stat-number"
+                  data-target="65"
+                  data-symbol="%"
+                  style="font-size: 18px; color: var(--primary-color)"
+                  >0</span
+                >
+              </p>
+            </div>
+            <div class="tool-1 t-2">
+              <img
+                src="./assets/ms-office.png"
+                alt="ms-office icon"
+                class="tool-icons"
+              />
+              <!-- <p class="count" data-target="80" data-symbol="%">0</p> -->
+              <p>
+                Ms Office <br />
+                <br />
+                <span
+                  class="stat-number"
+                  data-target="80"
+                  data-symbol="%"
+                  style="font-size: 18px; color: var(--primary-color)"
+                  >0</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
