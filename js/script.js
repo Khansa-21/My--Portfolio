@@ -140,3 +140,12 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach((el) => observer.observe(el));
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    cards.forEach((c) => c.classList.remove("active"));
+    card.classList.add("active");
+  });
+});
