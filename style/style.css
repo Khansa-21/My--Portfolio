@@ -317,7 +317,7 @@ video {
 }
 /* =========== MY SKILLS ========== */
 .skills {
-  top: 95%;
+  top: 90%;
 }
 
 .heading {
@@ -399,6 +399,8 @@ video {
   height: 200px;
 }
 
+/* ==========TOOLS ANIMATIONS=========== */
+
 .t-1.show {
   animation: slideDown 1s ease-out forwards;
 }
@@ -471,7 +473,7 @@ p {
 
 /* ==========SERVICES =========== */
 .services {
-  top: 250%;
+  top: 240%;
 }
 
 .carasouel-cards {
@@ -532,6 +534,8 @@ p {
   font-size: 50px;
 }
 
+/* ==========PRE TAGS =========== */
+
 .ser-detail {
   margin-top: 10px;
   color: purple;
@@ -540,6 +544,70 @@ p {
 
 .ser-detail:hover {
   color: var(--primary-color);
+}
+
+/* ==========PROJECTS =========== */
+.projects {
+  top: 330%;
+}
+
+.clones {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.vrtcl {
+  writing-mode: vertical-rl;
+  letter-spacing: 10px;
+  text-orientation: upright;
+  font-size: 28px;
+}
+
+.project-img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.youtube,
+.spotify {
+  width: 100%;
+  border: 1px groove hsl(0, 1%, 28%);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.youtube p,
+.spotify p {
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.tech-include {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-include span {
+  font-size: 14px;
+  background-color: rgb(151, 54, 151);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px palevioletred;
+}
+
+.youtube:hover,
+.spotify:hover {
+  box-shadow: 0 0 10px plum;
+  border: 2px solid purple;
+}
+
+.spotify {
+  margin-right: 10px;
 }
 
 /* =========== RESPONSIVE ============ */
