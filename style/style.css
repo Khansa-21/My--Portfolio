@@ -30,6 +30,12 @@
   z-index: 1;
 }
 
+/* ========== FLEX ========== */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 /* ========== PRELOADER ========== */
 #preloader {
   background: black url(/assets/prelaoder.gif) no-repeat center center;
@@ -317,7 +323,7 @@ video {
 }
 /* =========== MY SKILLS ========== */
 .skills {
-  top: 90%;
+  top: 95%;
 }
 
 .heading {
@@ -473,7 +479,7 @@ p {
 
 /* ==========SERVICES =========== */
 .services {
-  top: 240%;
+  top: 250%;
 }
 
 .carasouel-cards {
@@ -492,7 +498,6 @@ p {
   margin: 5px;
   height: 95%;
   border-radius: 20px;
-  cursor: pointer;
   transition: width 0.5s ease, bottom 0.8s ease-in-out;
   padding: 10px;
   box-shadow: 0 0 10px var(--primary-color);
@@ -548,7 +553,7 @@ p {
 
 /* ==========PROJECTS =========== */
 .projects {
-  top: 330%;
+  top: 340%;
 }
 
 .clones {
@@ -577,6 +582,7 @@ p {
   border: 1px groove hsl(0, 1%, 28%);
   border-radius: 20px;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .youtube p,
@@ -610,6 +616,49 @@ p {
   margin-right: 10px;
 }
 
+/* =========== CONTACT =========== */
+.contact {
+  top: 445%;
+}
+
+.contact-info {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 400px;
+  padding: 20px;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+/* =========== MAP =========== */
+iframe{
+  padding: 40px;
+  margin-left: 40px;
+}
+
+/* =========== CONTACT-FORM =========== */
+form{
+  padding: 20px;
+  margin-top: 20px;
+}
+form input,textarea{
+background: transparent;
+padding: 10px;
+border: 1px solid lightslategray;
+border-radius: 10px;
+color: var(--primary-color);
+width: 400px;
+}
+
+form button{
+  border: none;
+  background: transparent;
+  color: plum;
+  font-size: 16px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
 /* =========== RESPONSIVE ============ */
 @media (max-width: 768px) {
   .layout {

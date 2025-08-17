@@ -37,7 +37,7 @@
         <br />
 
         <div class="iconbox_3 ist" id="icon_s">
-          <a href=".about">
+          <a href="#about">
             <i
               class="bx bx-user-circle"
               id="icon"
@@ -45,17 +45,19 @@
               style="margin-top: 17px"
             ></i> </a
           ><br />
-          <a href=".skills"
+          <a href="#skills"
             ><i class="bx bx-bulb" id="icon" title="Skills"></i><br
           /></a>
-          <a href=".services">
+          <a href="#services">
             <i class="bx bx-wrench" id="icon" title="Services"></i><br />
           </a>
-          <a href=".projects">
+          <a href="#projects">
             <i class="bx bx-folder-open" id="icon" title="Projects"></i><br />
           </a>
           <i class="bx bx-receipt" id="icon"></i><br />
-          <i class="bx bx-paper-plane" id="icon" title="Contact"></i>
+          <a href="#contact">
+            <i class="bx bx-paper-plane" id="icon" title="Contact"></i>
+          </a>
         </div>
       </div>
 
@@ -84,7 +86,11 @@
               href="www.linkedin.com/in/khansa-ehsan-274282285"
               target="_blank"
             >
-              <i class="bx bxl-linkedin-square" id="icon"></i>
+              <i
+                class="bx bxl-linkedin-square"
+                id="icon"
+                data-cursor="hover"
+              ></i>
             </a>
             <i class="bx bxl-facebook-square" id="icon"></i>
           </div>
@@ -112,7 +118,7 @@
       <div class="main_scroll ist layout">
         <h2>Hello, I'm <span id="name-slide">Khansa Ehsan</span></h2>
 
-        <div class="about">
+        <div class="about" id="about">
           <h1>
             Expert in SEO and
             <div id="spaned"><span>Full Stack</span></div>
@@ -156,7 +162,7 @@
 
       <!-- Skills -->
 
-      <div class="skills layout ist">
+      <div class="skills layout ist" id="skills">
         <h2 class="heading">My Skills</h2>
         <div class="tech flex">
           <!-- SKILL BARS -->
@@ -405,7 +411,7 @@
 
       <!-- Services -->
 
-      <div class="services ist layout">
+      <div class="services ist layout" id="services">
         <h2 class="heading">MY Services</h2>
         <!-- Services Crasouel  -->
 
@@ -537,7 +543,7 @@ organic visibility."
       <!-- Services Section Ends -->
 
       <!-- Projects -->
-      <div class="projects ist layout">
+      <div class="projects ist layout" id="projects">
         <h2 class="heading">Projects</h2>
         <div class="clones">
           <h3 class="heading vrtcl">CLONES</h3>
@@ -622,6 +628,70 @@ organic visibility."
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact ist layout" id="contact">
+        <h2 class="heading">Contact Me</h2>
+        <h3 style="text-align: center; margin-top: 10px">
+          Let's Get In Touch!
+        </h3>
+        <div class="flex" style="justify-content: space-around">
+          <div class="ist contact-info">
+            <i class="bx bx-phone-incoming" id="icon"></i>
+            <span>Phone</span>
+            <span style="margin-left: 20px">+92 307 5588497</span>
+          </div>
+          <div class="contact-info ist">
+            <i class="bx bx-envelope-open" id="icon"></i>
+            <span>E-mail</span>
+            <span style="margin-left: 20px">ekhansa77@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex" style="justify-content: space-around">
+          <div class="contact-info ist" style="width: 860px">
+            <i class="bx bx-location-plus" id="icon"></i>
+            <span>Address</span>
+            <span style="margin-left: 500px">Lahore, Punjab, Pakistan</span>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3401.178756111846!2d74.314!3d31.519249999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDMxJzA5LjMiTiA3NMKwMTgnNTAuNCJF!5e0!3m2!1sen!2s!4v1755447292817!5m2!1sen!2s"
+          width="850"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <h3 style="text-align: center; margin-top: 20px">
+          Let's make Your Project Brilliant!
+        </h3>
+        <form
+          action="
+https://formspree.io/f/xovlzdap
+         "
+          method="post"
+          id="cform"
+        >
+          <div
+            class="flex"
+            style="justify-content: space-around; margin-bottom: 10px"
+          >
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+          <textarea
+            name="msg"
+            id=""
+            placeholder="Your Message"
+            required
+            style="width: 840px; height: 100px; margin-left: 20px"
+          ></textarea>
+          <br />
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="formStatus"></p>
       </div>
     </div>
 

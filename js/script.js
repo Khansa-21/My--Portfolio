@@ -149,3 +149,25 @@ cards.forEach((card) => {
     card.classList.add("active");
   });
 });
+
+// 👉 Contact form result
+
+const form = document.getElementById("cform");
+const status = document.getElementById("formStatus");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  let data = new FormData(form);
+  let response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { Accept: "application/json" },
+  });
+
+  if (response.ok) {
+    status.innerHTML = "✅ Thanks! Your message has been sent.";
+    form.reset();
+  } else {
+    status.innerHTML = "❌ Oops! Something went wrong. Try again!";
+  }
+});
