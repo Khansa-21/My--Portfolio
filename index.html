@@ -15,7 +15,7 @@
     />
   </head>
 
-  <body>
+  <body class="flex">
     <!-- Preloader -->
     <div id="preloader"></div>
 
@@ -23,49 +23,49 @@
     <video src="assets/bg-video2.mp4" loop autoplay muted plays-inline></video>
 
     <div class="body">
-      <!-- Sidebar Icons -->
+      <!-- ================= Sidebar Icons ================= -->
       <div class="icons">
-        <div class="ist iconbox_2" id="icon_s">
-          <i class="bx bx-menu" id="icon"></i>
-        </div>
-        <br />
-
-        <div class="ist iconbox_2" id="icon_s">
+        <!-- Theme Toggle (Light/Dark Mode) -->
+        <div class="iconbox_2 ist" id="icon_s">
+          <!-- Sun icon (default visible) -->
           <i class="bx bx-sun" id="icon"></i>
+          <!-- Moon icon (hidden by default) -->
           <i class="bx bx-moon" id="icon" style="display: none"></i>
         </div>
-        <br />
 
+        <!-- Navigation Icons -->
         <div class="iconbox_3 ist" id="icon_s">
           <a href="#about">
-            <i
-              class="bx bx-user-circle"
-              id="icon"
-              title="About"
-              style="margin-top: 17px"
-            ></i> </a
-          ><br />
-          <a href="#skills"
-            ><i class="bx bx-bulb" id="icon" title="Skills"></i><br
-          /></a>
+            <i class="bx bx-user-circle" id="icon" title="About"></i>
+          </a>
+
+          <a href="#skills">
+            <i class="bx bx-bulb" id="icon" title="Skills"></i>
+          </a>
+
           <a href="#services">
-            <i class="bx bx-wrench" id="icon" title="Services"></i><br />
+            <i class="bx bx-wrench" id="icon" title="Services"></i>
           </a>
+
           <a href="#projects">
-            <i class="bx bx-folder-open" id="icon" title="Projects"></i><br />
+            <i class="bx bx-folder-open" id="icon" title="Projects"></i>
           </a>
-          <i class="bx bx-receipt" id="icon"></i><br />
+
           <a href="#contact">
             <i class="bx bx-paper-plane" id="icon" title="Contact"></i>
           </a>
         </div>
       </div>
+      <!-- ================= End Sidebar Icons ================= -->
 
-      <!-- Profile Section -->
+      <!-- ================= Profile Section ================= -->
       <div class="image_section ist">
+        <!-- Carousel (currently empty, you can add images/slides here) -->
         <div class="carasouel"></div>
 
+        <!-- Profile & Info -->
         <div class="name-section">
+          <!-- Profile Picture -->
           <div class="img">
             <img
               id="profile"
@@ -74,16 +74,19 @@
             />
           </div>
 
+          <!-- Name -->
           <div class="name">Khansa Ehsan</div>
+
+          <!-- Profession (dynamic via JS maybe) -->
           <div id="profession"></div>
 
           <!-- Social Icons -->
-          <div style="text-align: center; margin-top: 20px">
+          <div class="social-icons">
             <a href="https://github.com/Khansa-21/" target="_blank">
               <i class="bx bxl-github" id="icon"></i>
             </a>
             <a
-              href="www.linkedin.com/in/khansa-ehsan-274282285"
+              href="https://www.linkedin.com/in/khansa-ehsan-274282285"
               target="_blank"
             >
               <i
@@ -92,341 +95,353 @@
                 data-cursor="hover"
               ></i>
             </a>
-            <i class="bx bxl-facebook-square" id="icon"></i>
+            <a href="#">
+              <i class="bx bxl-facebook-square" id="icon"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Download/Contact Buttons -->
-        <div class="download">
+        <!-- ================= Download / Contact Buttons ================= -->
+        <div class="download flex">
+          <!-- Download CV -->
           <div>
             <a href="./assets/Khansa_E_Resume.pdf" download>Download CV</a>
           </div>
-          <div
-            style="
-              width: 2px;
-              background-color: var(--primary-color);
-              height: 100%;
-              margin: 0 10px;
-            "
-          ></div>
-          <div><a href="#cform">Contact Me</a></div>
+
+          <!-- Divider Line -->
+          <div class="divider"></div>
+
+          <!-- Contact Me -->
+          <div>
+            <a href="#cform">Contact Me</a>
+          </div>
         </div>
+        <!-- ================= End Download / Contact Buttons ================= -->
       </div>
+      <!-- ================= End Profile Section ================= -->
 
-      <!-- Main Content -->
+      <!-- ================= Main Section ================= -->
+      <main>
+        <div class="main_scroll ist layout">
+          <!-- Greeting / Intro -->
+          <h2>Hello, I'm <span id="name-slide">Khansa Ehsan</span></h2>
 
-      <div class="main_scroll ist layout">
-        <h2>Hello, I'm <span id="name-slide">Khansa Ehsan</span></h2>
+          <!-- About Section -->
+          <div class="about" id="about">
+            <h1>
+              Expert in SEO and
+              <div id="spaned"><span>Full Stack</span></div>
+              Development Based in Lahore, Pakistan
+            </h1>
 
-        <div class="about" id="about">
-          <h1>
-            Expert in SEO and
-            <div id="spaned"><span>Full Stack</span></div>
-            Development Based in Lahore, Pakistan
-          </h1>
+            <!-- Short Bio -->
+            <p>
+              Passionate about creating innovative solutions and bringing ideas
+              to life through code. Specialized in modern web technologies and
+              user-centered design. Building amazing digital experiences with
+              modern technologies.
+            </p>
 
-          <p>
-            Passionate about creating innovative solutions and bringing ideas to
-            life through code. Specialized in modern web technologies and
-            user-centered design. Building amazing digital experiences with
-            modern technologies.
-          </p>
+            <!-- CTA Button -->
+            <button id="btn">
+              <a href="#projects" style="color: var(--primary-color)"
+                >View My Work</a
+              >
+            </button>
 
-          <button id="btn">View My Work</button>
+            <!-- Stats & Code Snippet -->
+            <div class="count">
+              <!-- Stat 1 -->
+              <div class="stat-card">
+                <div class="stat-number" data-target="2" data-symbol="+">0</div>
+                <div class="stat-label">Years of Experience</div>
+              </div>
 
-          <!-- Stats & Code Snippet -->
-          <div class="count">
-            <div class="stat-card">
-              <div class="stat-number" data-target="2" data-symbol="+">0</div>
-              <div class="stat-label">Years of Experience</div>
-            </div>
+              <!-- Stat 2 -->
+              <div class="stat-card">
+                <div class="stat-number" data-target="100" data-symbol="%">
+                  0
+                </div>
+                <div class="stat-label">Client Satisfaction</div>
+              </div>
 
-            <div class="stat-card">
-              <div class="stat-number" data-target="100" data-symbol="%">0</div>
-              <div class="stat-label">Client Satisfaction</div>
-            </div>
-
-            <div class="code-snippet">
-              <span class="color-1"> const </span>
-              <span class="color-2">developer </span> =
-              <span class="color-2"> { </span><br />
-              &nbsp;&nbsp;name: "KHANSA EHSAN",<br />
-              &nbsp;&nbsp;skills: ["React", "Node.js", "Mongodb"],<br />
-              &nbsp;&nbsp;passion: "Creating amazing web experiences"<br />
-              <span class="color-2"> } </span>;
+              <!-- Fun Code Snippet -->
+              <div class="code-snippet">
+                <span class="color-1">const</span>
+                <span class="color-2"> developer </span> =
+                <span class="color-2">{</span><br />
+                &nbsp;&nbsp;name: "KHANSA EHSAN",<br />
+                &nbsp;&nbsp;skills: ["React", "Node.js", "MongoDB"],<br />
+                &nbsp;&nbsp;passion: "Creating amazing web experiences"<br />
+                <span class="color-2">}</span>;
+              </div>
             </div>
           </div>
+          <!-- End About Section -->
         </div>
-      </div>
-      <!-- About Section Ends -->
 
-      <!-- Skills -->
+        <!-- ================= Skills Section ================= -->
+        <div class="skills layout ist" id="skills">
+          <h2 class="heading">My Skills</h2>
 
-      <div class="skills layout ist" id="skills">
-        <h2 class="heading">My Skills</h2>
-        <div class="tech flex">
-          <!-- SKILL BARS -->
+          <div class="tech flex">
+            <!-- ================= Frontend Skills ================= -->
+            <div class="tech-item">
+              <h3 class="heading">Frontend</h3>
 
-          <div class="tech-item">
-            <h3 class="heading">Frontend</h3>
-            <div class="tech-list">
-              <div class="flex">
-                <img
-                  src="./assets/html-css.png"
-                  alt="html-css-icon"
-                  class="tech-icons"
-                />
-                <p style="margin-left: 5px">HTML/CSS</p>
-                <span
-                  class="progress-count stat-number"
-                  data-target="95"
-                  data-symbol="%"
-                  style="color: var(--primary-color)"
-                  >0</span
-                >
+              <div class="tech-list">
+                <!-- Skill: HTML/CSS -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/html-css.png"
+                    alt="HTML-CSS Icon"
+                    class="tech-icons"
+                  />
+                  <p>HTML/CSS</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="95"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="95" class="progress-bar"></div>
+                </div>
+
+                <!-- Skill: React -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/React-icon.png"
+                    alt="React Icon"
+                    class="tech-icons"
+                  />
+                  <p>React</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="80"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="80" class="progress-bar"></div>
+                </div>
+
+                <!-- Skill: JavaScript -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/js.png"
+                    alt="JavaScript Icon"
+                    class="tech-icons"
+                  />
+                  <p>JavaScript</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="80"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="80" class="progress-bar"></div>
+                </div>
+
+                <!-- Skill: WordPress -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/wordpress.png"
+                    alt="WordPress Icon"
+                    class="tech-icons"
+                  />
+                  <p>WordPress</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="70"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="70" class="progress-bar"></div>
+                </div>
               </div>
-              <div class="progress">
-                <div data-percent="95" class="progress-bar"></div>
-              </div>
-              <br />
-              <div class="flex">
-                <img
-                  src="./assets/React-icon.png"
-                  alt="React-icon"
-                  class="tech-icons"
-                />
-                <p style="margin-left: 5px">React</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 185px; color: var(--primary-color)"
-                  data-target="80"
-                  data-symbol="%"
-                  >0</span
-                >
-              </div>
-              <div class="progress">
-                <div data-percent="80" class="progress-bar"></div>
-              </div>
-              <br />
-              <div class="flex">
-                <img src="./assets/js.png" alt="JS-icon" class="tech-icons" />
-                <p style="margin-left: 5px">JavaScript</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 150px; color: var(--primary-color)"
-                  data-target="80"
-                  data-symbol="%"
-                  >0</span
-                >
-              </div>
-              <div class="progress">
-                <div data-percent="80" class="progress-bar"></div>
-              </div>
-              <br />
-              <div class="flex">
-                <img
-                  src="./assets/wordpress.png"
-                  alt="wordpress-icon"
-                  class="tech-icons"
-                />
-                <p style="margin-left: 5px">Wordpress</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 150px; color: var(--primary-color)"
-                  data-target="70"
-                  data-symbol="%"
-                  >0</span
-                >
-              </div>
-              <div class="progress">
-                <div data-percent="70" class="progress-bar"></div>
+            </div>
+            <!-- ================= End Frontend Skills ================= -->
+
+            <!-- ================= Backend Skills ================= -->
+            <div class="tech-item" style="margin-right: 30px">
+              <h3 class="heading">Backend</h3>
+              <div class="tech-list">
+                <!-- Skill: Node.js -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/node.png"
+                    alt="Node.js Icon"
+                    class="tech-icons"
+                  />
+                  <p>Node.js</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="70"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="70" class="progress-bar"></div>
+                </div>
+
+                <!-- Database Section -->
+                <h3 class="heading sub-heading">Database</h3>
+
+                <!-- Skill: MongoDB -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/mongo.png"
+                    alt="MongoDB Icon"
+                    class="tech-icons"
+                  />
+                  <p>MongoDB</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="70"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="70" class="progress-bar"></div>
+                </div>
+
+                <!-- Python Section -->
+                <h3 class="heading sub-heading">Python</h3>
+
+                <!-- Skill: Python -->
+                <div class="flex skill">
+                  <img
+                    src="./assets/pyt.png"
+                    alt="Python Icon"
+                    class="tech-icons"
+                  />
+                  <p>Python</p>
+                  <span
+                    class="progress-count stat-number"
+                    data-target="60"
+                    data-symbol="%"
+                    >0</span
+                  >
+                </div>
+                <div class="progress">
+                  <div data-percent="60" class="progress-bar"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="tech-item">
-            <h3 class="heading">Backend</h3>
-            <div class="tech-list">
-              <div class="flex">
+          <!-- ================= End Backend Skills ================= -->
+
+          <!-- ================= Tool Stack ================= -->
+          <div class="tools">
+            <h3 class="heading">Tool Stack</h3>
+            <div class="stack">
+              <!-- Tool: Visual Studio -->
+              <div class="tool-1 t-3">
                 <img
-                  src="./assets/node.png"
-                  alt="node-icon"
-                  class="tech-icons"
+                  src="./assets/VS.png"
+                  alt="Visual Studio icon"
+                  class="tool-icons"
                 />
-                <p style="margin-left: 5px">Node js</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 160px; color: var(--primary-color)"
-                  data-target="70"
-                  data-symbol="%"
-                  >0</span
-                >
+                <p>
+                  Visual Studio <br /><br />
+                  <span class="stat-number" data-target="95" data-symbol="%"
+                    >0</span
+                  >
+                </p>
               </div>
-              <div class="progress">
-                <div data-percent="70" class="progress-bar"></div>
-              </div>
-              <h3 style="margin-left: 10px" class="heading">Database</h3>
-              <br />
-              <div class="flex">
+
+              <!-- Tool: ChatGPT -->
+              <div class="tool-1 t-1">
                 <img
-                  src="./assets/mongo.png"
-                  alt="Mongodb-icon"
-                  class="tech-icons"
+                  src="./assets/Chatgpt.png"
+                  alt="ChatGPT icon"
+                  class="tool-icons"
                 />
-                <p style="margin-left: 5px">MongoDB</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 150px; color: var(--primary-color)"
-                  data-target="70"
-                  data-symbol="%"
-                  >0</span
-                >
+                <p>
+                  ChatGPT <br /><br />
+                  <span class="stat-number" data-target="80" data-symbol="%"
+                    >0</span
+                  >
+                </p>
               </div>
-              <div class="progress">
-                <div data-percent="70" class="progress-bar"></div>
-              </div>
-              <h3 style="margin-left: 10px" class="heading">Python</h3>
-              <br />
-              <div class="flex">
+
+              <!-- Tool: Canva -->
+              <div class="tool-1 t-4">
                 <img
-                  src="./assets/pyt.png"
-                  alt="Python-icon"
-                  class="tech-icons"
+                  src="./assets/canva.png"
+                  alt="Canva icon"
+                  class="tool-icons"
                 />
-                <p style="margin-left: 5px">Python</p>
-                <span
-                  class="progress-count stat-number"
-                  style="margin-left: 165px; color: var(--primary-color)"
-                  data-target="60"
-                  data-symbol="%"
-                  >0</span
-                >
+                <p>
+                  Canva <br /><br />
+                  <span class="stat-number" data-target="70" data-symbol="%"
+                    >0</span
+                  >
+                </p>
               </div>
-              <div class="progress">
-                <div data-percent="60" class="progress-bar"></div>
+
+              <!-- Tool: Claude AI -->
+              <div class="tool-1 t-3">
+                <img
+                  src="./assets/claud-ai.png"
+                  alt="Claude-ai icon"
+                  class="tool-icons"
+                />
+                <p>
+                  Claude-ai <br /><br />
+                  <span class="stat-number" data-target="65" data-symbol="%"
+                    >0</span
+                  >
+                </p>
               </div>
-              <br />
+
+              <!-- Tool: MS Office -->
+              <div class="tool-1 t-2">
+                <img
+                  src="./assets/ms-office.png"
+                  alt="ms-office icon"
+                  class="tool-icons"
+                />
+                <p>
+                  Ms Office <br /><br />
+                  <span class="stat-number" data-target="80" data-symbol="%"
+                    >0</span
+                  >
+                </p>
+              </div>
             </div>
           </div>
+          <!-- ================= End Tool Stack ================= -->
         </div>
-        <div class="tools">
-          <h3 class="heading">Tool Stack</h3>
-          <div class="stack">
-            <!-- TOOLS -->
 
-            <div class="tool-1 t-3">
-              <img
-                src="./assets/VS.png"
-                alt="Visual Studio icon"
-                class="tool-icons"
-              />
-              <p>
-                Visual Studio <br />
-                <br />
-                <span
-                  class="stat-number"
-                  data-target="95"
-                  data-symbol="%"
-                  style="font-size: 18px; color: var(--primary-color)"
-                  >0</span
-                >
-              </p>
-            </div>
-            <div class="tool-1 t-1">
-              <img
-                src="./assets/Chatgpt.png"
-                alt="Chatgpt icon"
-                class="tool-icons"
-                caption="chatgpt"
-              />
-              <p>
-                ChatGPT <br />
-                <br />
-                <span
-                  class="stat-number"
-                  data-target="80"
-                  data-symbol="%"
-                  style="font-size: 18px; color: var(--primary-color)"
-                  >0</span
-                >
-              </p>
-            </div>
-            <div class="tool-1 t-4">
-              <img
-                src="./assets/canva.png"
-                alt="Canva icon"
-                class="tool-icons"
-              />
-              <p>
-                Canva <br />
-                <br />
-                <span
-                  class="stat-number"
-                  data-target="70"
-                  data-symbol="%"
-                  style="font-size: 18px; color: var(--primary-color)"
-                  >0</span
-                >
-              </p>
-            </div>
-            <div class="tool-1 t-3">
-              <img
-                src="./assets/claud-ai.png"
-                alt="Claude-ai icon"
-                class="tool-icons"
-              />
-              <p>
-                Claude-ai <br />
-                <br />
-                <span
-                  class="stat-number"
-                  data-target="65"
-                  data-symbol="%"
-                  style="font-size: 18px; color: var(--primary-color)"
-                  >0</span
-                >
-              </p>
-            </div>
-            <div class="tool-1 t-2">
-              <img
-                src="./assets/ms-office.png"
-                alt="ms-office icon"
-                class="tool-icons"
-              />
-              <p>
-                Ms Office <br />
-                <br />
-                <span
-                  class="stat-number"
-                  data-target="80"
-                  data-symbol="%"
-                  style="font-size: 18px; color: var(--primary-color)"
-                  >0</span
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Skills Section Ends -->
+        <!-- ================= End Skills Section ================= -->
 
-      <!-- Services -->
+        <!-- ================= Services ================= -->
+        <div class="services ist layout" id="services">
+          <h2 class="heading">MY Services</h2>
+          <!-- Services Crasouel  -->
 
-      <div class="services ist layout" id="services">
-        <h2 class="heading">MY Services</h2>
-        <!-- Services Crasouel  -->
+          <div class="carasouel-cards flex">
+            <!-- Carasouel design -->
 
-        <div class="carasouel-cards">
-          <!-- Carasouel design -->
+            <div class="card active ist">
+              <i class="bx bx-radio-circle color-3"></i>
+              <i class="bx bx-radio-circle color-1"></i>
+              <i class="bx bx-radio-circle color-2"></i>
+              <hr />
+              <!-- Card 1 Full Stack -->
 
-          <div class="card active ist">
-            <i class="bx bx-radio-circle color-3"></i>
-            <i class="bx bx-radio-circle color-1"></i>
-            <i class="bx bx-radio-circle color-2"></i>
-            <hr />
-            <!-- Card 1 Full Stack -->
-
-            <h3 class="heading">Full Stack Development</h3>
-            <pre class="ser-detail">
+              <h3 class="heading">Full Stack Development</h3>
+              <pre class="ser-detail">
 
 
  <span class="color-1"> console.log </span> <span class="color-2">(</span> 
@@ -439,18 +454,18 @@
 
 <span class="color-2">) </span> <span style="color: var(--primary-color);">;</span>
         </pre>
-          </div>
-          <div class="card ist">
-            <!-- Carasouel design -->
+            </div>
+            <div class="card ist">
+              <!-- Carasouel design -->
 
-            <i class="bx bx-radio-circle color-3"></i>
-            <i class="bx bx-radio-circle color-1"></i>
-            <i class="bx bx-radio-circle color-2"></i>
-            <hr />
-            <!-- Card 2 Frontend -->
+              <i class="bx bx-radio-circle color-3"></i>
+              <i class="bx bx-radio-circle color-1"></i>
+              <i class="bx bx-radio-circle color-2"></i>
+              <hr />
+              <!-- Card 2 Frontend -->
 
-            <h3 class="heading">Front End Development</h3>
-            <pre class="ser-detail">
+              <h3 class="heading">Front End Development</h3>
+              <pre class="ser-detail">
 <span class="color-1"> const </span> <span class="color-2"> skills </span> = <span class="color-2"> { </span>
   html: true,
   css: true,
@@ -465,18 +480,18 @@ responsive front-end designs for websites
 using modern layouts and styling." 
 <span class="color-2">) </span> <span style="color: var(--primary-color);">;</span>
             </pre>
-          </div>
-          <div class="card ist">
-            <!-- Carasouel design -->
+            </div>
+            <div class="card ist">
+              <!-- Carasouel design -->
 
-            <i class="bx bx-radio-circle color-3"></i>
-            <i class="bx bx-radio-circle color-1"></i>
-            <i class="bx bx-radio-circle color-2"></i>
-            <hr />
-            <!-- Card 3 Backend -->
+              <i class="bx bx-radio-circle color-3"></i>
+              <i class="bx bx-radio-circle color-1"></i>
+              <i class="bx bx-radio-circle color-2"></i>
+              <hr />
+              <!-- Card 3 Backend -->
 
-            <h3 class="heading">Back End Development</h3>
-            <pre class="ser-detail">
+              <h3 class="heading">Back End Development</h3>
+              <pre class="ser-detail">
 
 <span class="color-1"> let </span> <span class="color-2"> description </span> = <span class="color-2"> [ </span>
 "Server-side development for form submissions" ,
@@ -489,18 +504,18 @@ using modern layouts and styling."
 Working with Node, Express, JWT and DBs"
 <span class="color-2">) </span> <span style="color: var(--primary-color);">;</span>
             </pre>
-          </div>
-          <div class="card ist">
-            <!-- Carasouel design -->
+            </div>
+            <div class="card ist">
+              <!-- Carasouel design -->
 
-            <i class="bx bx-radio-circle color-3"></i>
-            <i class="bx bx-radio-circle color-1"></i>
-            <i class="bx bx-radio-circle color-2"></i>
-            <hr />
-            <!-- Card 4 Database -->
+              <i class="bx bx-radio-circle color-3"></i>
+              <i class="bx bx-radio-circle color-1"></i>
+              <i class="bx bx-radio-circle color-2"></i>
+              <hr />
+              <!-- Card 4 Database -->
 
-            <h3 class="heading">Basic Database Integration</h3>
-            <pre class="ser-detail">
+              <h3 class="heading">Basic Database Integration</h3>
+              <pre class="ser-detail">
 
 <span class="color-1"> let </span> <span class="color-2"> CRUD </span> = "Create, Read, Update, Delete" ;
 
@@ -512,18 +527,18 @@ Store and manage data securely using
 simple database structures for small apps.`
 <span class="color-2">) </span> <span style="color: var(--primary-color);">;</span>
             </pre>
-          </div>
-          <div class="card ist">
-            <!-- Carasouel design -->
+            </div>
+            <div class="card ist">
+              <!-- Carasouel design -->
 
-            <i class="bx bx-radio-circle color-3"></i>
-            <i class="bx bx-radio-circle color-1"></i>
-            <i class="bx bx-radio-circle color-2"></i>
-            <hr />
-            <!-- Card 4 SEO -->
+              <i class="bx bx-radio-circle color-3"></i>
+              <i class="bx bx-radio-circle color-1"></i>
+              <i class="bx bx-radio-circle color-2"></i>
+              <hr />
+              <!-- Card 4 SEO -->
 
-            <h3 class="heading">SEO</h3>
-            <pre class="ser-detail">
+              <h3 class="heading">SEO</h3>
+              <pre class="ser-detail">
 <span class="color-1"> let </span> <span class="color-2"> seoService </span> = <span class="color-2"> [ </span>
 "Manual Backlink Submission",
 "Meta Tag Optimization",
@@ -536,168 +551,260 @@ to improve search engine ranking and
 organic visibility."
 <span class="color-2">) </span> <span style="color: var(--primary-color);">;</span>
             </pre>
-          </div>
-        </div>
-        <!-- Carasouel ends      -->
-      </div>
-      <!-- Services Section Ends -->
-
-      <!-- Projects -->
-      <div class="projects ist layout" id="projects">
-        <h2 class="heading">Projects</h2>
-        <div class="clones">
-          <h3 class="heading vrtcl">CLONES</h3>
-          <div class="youtube">
-            <a
-              href="https://khansa-21.github.io/Youtube-like-clone/"
-              target="_blank"
-            >
-              <img
-                src="assets/youtube clone.png"
-                alt="Project image"
-                class="project-img"
-              />
-            </a>
-            <div class="project-description">
-              <div style="display: flex; justify-content: space-between">
-                <h3>Clone Like Youtube</h3>
-                <a
-                  href="https://khansa-21.github.io/Youtube-like-clone/"
-                  target="_blank"
-                  ><img
-                    src="assets/right-up.png"
-                    alt="Arrow-up icon"
-                    style="margin-right: 20px"
-                  />
-                </a>
-              </div>
-              <p>
-                A pixel-perfect YouTube clone featuring responsive design and
-                interactive user interface with dark/light mode toggle. This
-                project demonstrates proficiency in frontend development by
-                replicating YouTube's core functionality and visual aesthetics.
-                This isn't just a static homepage! Click on any video to explore
-                the full video player page.
-              </p>
-              <div class="tech-include">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Responsive Design</span>
-                <span>Interactive UI</span>
-              </div>
             </div>
           </div>
-          <div class="spotify">
-            <a
-              href="https://khansa-21.github.io/spotify-clone/"
-              target="_blank"
-            >
-              <img
-                src="assets/spotify clone.png"
-                alt="Project image"
-                class="project-img"
-              />
-            </a>
-            <div class="project-description">
-              <div style="display: flex; justify-content: space-between">
-                <h3>Spotify Web Player Clone</h3>
-                <a
-                  href="https://khansa-21.github.io/spotify-clone/"
-                  target="_blank"
-                  ><img
-                    src="assets/right-up.png"
-                    alt="Arrow-up icon"
-                    style="margin-right: 20px"
-                  />
-                </a>
-              </div>
-              <p>
-                A front-end replica of Spotify’s web interface built with HTML,
-                CSS, and JavaScript. Features a clean layout, playlist-style
-                cards, and a visually polished design inspired by the original
-                Spotify UI. Demonstrates strong skills in UI styling, and
-                front-end development best practices.
-              </p>
-              <div class="tech-include">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>front-end development</span>
+          <!-- Carasouel ends      -->
+        </div>
+        <!-- ================= Services Section End ================= -->
+
+        <!-- =======================
+     PROJECTS SECTION 
+======================== -->
+        <div class="projects ist layout" id="projects">
+          <h2 class="heading">Projects</h2>
+
+          <!-- ========== CLONES CATEGORY ========== -->
+          <div class="clones flex">
+            <h3 class="heading vrtcl">CLONES</h3>
+
+            <!-- ==== YOUTUBE CLONE PROJECT ==== -->
+            <div class="youtube">
+              <!-- Project Thumbnail -->
+              <a
+                href="https://khansa-21.github.io/Youtube-like-clone/"
+                target="_blank"
+              >
+                <img
+                  src="assets/youtube clone.png"
+                  alt="YouTube Clone Project Screenshot"
+                  class="project-img"
+                />
+              </a>
+
+              <!-- Project Details -->
+              <div class="project-description">
+                <!-- Title + External Link -->
+                <div style="display: flex; justify-content: space-between">
+                  <h3>Clone Like YouTube</h3>
+                  <a
+                    href="https://khansa-21.github.io/Youtube-like-clone/"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/right-up.png"
+                      alt="Arrow-up icon (external link)"
+                      style="margin-right: 20px"
+                    />
+                  </a>
+                </div>
+
+                <!-- Description -->
+                <p>
+                  A pixel-perfect YouTube clone featuring responsive design and
+                  interactive user interface with dark/light mode toggle. This
+                  project demonstrates proficiency in frontend development by
+                  replicating YouTube's core functionality and visual
+                  aesthetics.
+                  <strong>Note:</strong> This isn't just a static homepage!
+                  Click on any video to explore the full video player page.
+                </p>
+
+                <!-- Tech Used -->
+                <div class="tech-include flex">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Responsive Design</span>
+                  <span>Interactive UI</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <!-- ==== END YOUTUBE CLONE ==== -->
 
-      <!-- Contact -->
-      <div class="contact ist layout" id="contact">
-        <h2 class="heading">Contact Me</h2>
-        <h3 style="text-align: center; margin-top: 10px">
-          Let's Get In Touch!
-        </h3>
-        <div class="flex" style="justify-content: space-around">
-          <div class="ist contact-info">
-            <i class="bx bx-phone-incoming" id="icon"></i>
-            <span>Phone</span>
-            <span style="margin-left: 20px">+92 307 5588497</span>
+            <!-- ==== SPOTIFY CLONE PROJECT ==== -->
+            <div class="spotify">
+              <!-- Project Thumbnail -->
+              <a
+                href="https://khansa-21.github.io/spotify-clone/"
+                target="_blank"
+              >
+                <img
+                  src="assets/spotify clone.png"
+                  alt="Spotify Clone Project Screenshot"
+                  class="project-img"
+                />
+              </a>
+
+              <!-- Project Details -->
+              <div class="project-description">
+                <!-- Title + External Link -->
+                <div style="display: flex; justify-content: space-between">
+                  <h3>Spotify Web Player Clone</h3>
+                  <a
+                    href="https://khansa-21.github.io/spotify-clone/"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/right-up.png"
+                      alt="Arrow-up icon (external link)"
+                      style="margin-right: 20px"
+                    />
+                  </a>
+                </div>
+
+                <!-- Description -->
+                <p>
+                  A front-end replica of Spotify’s web interface built with
+                  <strong>HTML, CSS, and JavaScript</strong>. Features a clean
+                  layout, playlist-style cards, and a visually polished design
+                  inspired by the original Spotify UI. Demonstrates strong
+                  skills in <em>UI styling</em> and front-end development best
+                  practices.
+                </p>
+
+                <!-- Tech Used -->
+                <div class="tech-include flex">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Front-End Development</span>
+                </div>
+              </div>
+            </div>
+            <!-- ==== END SPOTIFY CLONE ==== -->
           </div>
-          <div class="contact-info ist">
-            <i class="bx bx-envelope-open" id="icon"></i>
-            <span>E-mail</span>
-            <span style="margin-left: 20px">ekhansa77@gmail.com</span>
-          </div>
+          <!-- ========== END CLONES CATEGORY ========== -->
         </div>
-        <div class="flex" style="justify-content: space-around">
-          <div class="contact-info ist" style="width: 860px">
-            <i class="bx bx-location-plus" id="icon"></i>
-            <span>Address</span>
-            <span style="margin-left: 500px">Lahore, Punjab, Pakistan</span>
+        <!-- ======================= END PROJECTS SECTION ====================== -->
+
+        <!-- Contact -->
+        <!-- ==== CONTACT SECTION ==== -->
+        <div class="contact ist layout" id="contact">
+          <h2 class="heading">Contact Me</h2>
+          <h3 class="contact-subheading">Let's Get In Touch!</h3>
+
+          <!-- Contact Info Row 1 -->
+          <div class="flex" style="justify-content: space-around">
+            <!-- Phone -->
+            <div class="contact-info ist">
+              <i class="bx bx-phone-incoming" id="icon"></i>
+              <span>Phone</span>
+              <span style="margin-left: 20px">+92 307 5588497</span>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-info ist">
+              <i class="bx bx-envelope-open" id="icon"></i>
+              <span>E-mail</span>
+              <span style="margin-left: 20px">ekhansa77@gmail.com</span>
+            </div>
           </div>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3401.178756111846!2d74.314!3d31.519249999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDMxJzA5LjMiTiA3NMKwMTgnNTAuNCJF!5e0!3m2!1sen!2s!4v1755447292817!5m2!1sen!2s"
-          width="850"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <h3 style="text-align: center; margin-top: 20px">
-          Let's make Your Project Brilliant!
-        </h3>
-        <form
-          action="
-https://formspree.io/f/xovlzdap
-         "
-          method="post"
-          id="cform"
-        >
+
+          <!-- Contact Info Row 2 (Address) -->
           <div
             class="flex"
-            style="justify-content: space-around; margin-bottom: 10px"
+            style="justify-content: space-around; margin-top: 15px"
           >
-            <input type="text" placeholder="Full Name" name="name" required />
-            <input type="email" placeholder="Email Address" name="email" required />
+            <div class="contact-info ist" style="max-width: 850px">
+              <i class="bx bx-location-plus" id="icon"></i>
+              <span>Address</span>
+              <span style="margin-left: 20px">Lahore, Punjab, Pakistan</span>
+            </div>
           </div>
-          <textarea
-            name="msg"
-            id=""
-            placeholder="Your Message"
-            required
-            style="width: 840px; height: 100px; margin-left: 20px"
-          ></textarea>
-          <br />
-          <button type="submit">Send Message</button>
-        </form>
-        <p id="formStatus"></p>
-      </div>
+
+          <!-- Google Map -->
+          <div style="margin-top: 20px">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3401.178756111846!2d74.314!3d31.519249999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDMxJzA5LjMiTiA3NMKwMTgnNTAuNCJF!5e0!3m2!1sen!2s!4v1755447292817!5m2!1sen!2s"
+              width="850"
+              height="450"
+              style="border: 0; border-radius: 12px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Closing Line -->
+          <h3 class="contact-subheading">Let's make Your Project Brilliant!</h3>
+
+          <!-- ==== CONTACT FORM ==== -->
+          <form
+            action="https://formspree.io/f/xovlzdap"
+            method="post"
+            id="cform"
+          >
+            <!-- Name + Email Row -->
+            <div
+              class="flex"
+              style="justify-content: space-around; margin-bottom: 10px"
+            >
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="name"
+                required
+                style="
+                  width: 48%;
+                  padding: 10px;
+                  border-radius: 6px;
+                  border: 1px solid #ccc;
+                "
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                required
+                style="
+                  width: 48%;
+                  padding: 10px;
+                  border-radius: 6px;
+                  border: 1px solid #ccc;
+                "
+              />
+            </div>
+
+            <!-- Message Box -->
+            <textarea
+              name="msg"
+              placeholder="Your Message"
+              required
+              style="
+                width: 96%;
+                height: 120px;
+                margin: 0 2%;
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                resize: none;
+              "
+            ></textarea>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 10px">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+
+          <!-- Form Status -->
+          <p id="formStatus" style="text-align: center; margin-top: 10px"></p>
+          <!-- ==== END CONTACT FORM ==== -->
+        </div>
+        <!-- ==== END CONTACT SECTION ==== -->
+      </main>
     </div>
 
-    <!-- JavaScript -->
+    <!-- ==== FOOTER ==== -->
+    <footer>
+      <p style="letter-spacing: 1px">
+        © 2025 <span style="font-weight: bold">Khansa Ehsan</span> All Rights
+        Reserved.
+      </p>
+    </footer>
+    <!-- ==== END FOOTER ==== -->
+
+    <!-- ======== JAVASCRIPT ============ -->
     <script src="js/script.js"></script>
   </body>
 </html>
-
-<!-- https://khansa-21.github.io/My--Portfolio/ -->
