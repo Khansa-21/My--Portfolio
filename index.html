@@ -8,6 +8,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style/style.css" />
 
+    <base href="/My--Portfolio/">
+
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,6 +24,47 @@
     <!-- Background Video -->
     <video src="assets/bg-video2.mp4" loop autoplay muted plays-inline></video>
 
+    <!-- Navigation Bar for mbl -->
+    <div class="nav">
+      <nav>
+        <div>
+          <div class="name" style="font-size: 28px">Khansa Ehsan</div>
+          <div
+            class="profession"
+            style="line-height: 0; font-size: 17px; height: 18px"
+          ></div>
+        </div>
+        <div class="nav-icons flex">
+          <div>
+            <i class="bx bx-sun" id="icon"></i>
+          </div>
+          <div><i class="bx bx-menu" id="icon"></i></div>
+        </div>
+      </nav>
+      <div class="ist menu-icons">
+        <div class="flex" style="flex-direction: column;">
+          <a href="#about">
+            <i class="bx bx-user-circle" id="icon" title="About">About</i>
+          </a>
+
+          <a href="#skills">
+            <i class="bx bx-bulb" id="icon" title="Skills">Skills</i>
+          </a>
+
+          <a href="#services">
+            <i class="bx bx-wrench" id="icon" title="Services">Services</i>
+          </a>
+
+          <a href="#projects">
+            <i class="bx bx-folder-open" id="icon" title="Projects">Projects</i>
+          </a>
+
+          <a href="#contact">
+            <i class="bx bx-paper-plane" id="icon" title="Contact">Contact</i>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="body">
       <!-- ================= Sidebar Icons ================= -->
       <div class="icons">
@@ -77,8 +120,8 @@
           <!-- Name -->
           <div class="name">Khansa Ehsan</div>
 
-          <!-- Profession (dynamic via JS maybe) -->
-          <div id="profession"></div>
+          <!-- Profession (dynamic via JS) -->
+          <div class="profession"></div>
 
           <!-- Social Icons -->
           <div class="social-icons">
@@ -186,7 +229,7 @@
 
           <div class="tech flex">
             <!-- ================= Frontend Skills ================= -->
-            <div class="tech-item">
+            <div class="tech-item ist">
               <h3 class="heading">Frontend</h3>
 
               <div class="tech-list">
@@ -270,7 +313,7 @@
             <!-- ================= End Frontend Skills ================= -->
 
             <!-- ================= Backend Skills ================= -->
-            <div class="tech-item" style="margin-right: 30px">
+            <div class="tech-item ist marg">
               <h3 class="heading">Backend</h3>
               <div class="tech-list">
                 <!-- Skill: Node.js -->
@@ -684,12 +727,12 @@ organic visibility."
           <h3 class="contact-subheading">Let's Get In Touch!</h3>
 
           <!-- Contact Info Row 1 -->
-          <div class="flex" style="justify-content: space-around">
+          <div class="flex row-1" style="justify-content: space-around">
             <!-- Phone -->
             <div class="contact-info ist">
               <i class="bx bx-phone-incoming" id="icon"></i>
               <span>Phone</span>
-              <span style="margin-left: 20px">+92 307 5588497</span>
+              <span class="marg-lt">+92 307 5588497</span>
             </div>
 
             <!-- Email -->
@@ -702,13 +745,13 @@ organic visibility."
 
           <!-- Contact Info Row 2 (Address) -->
           <div
-            class="flex"
+            class="flex row-1"
             style="justify-content: space-around; margin-top: 15px"
           >
             <div class="contact-info ist" style="max-width: 850px">
               <i class="bx bx-location-plus" id="icon"></i>
               <span>Address</span>
-              <span style="margin-left: 20px">Lahore, Punjab, Pakistan</span>
+              <span class="marg-lt">Lahore, Punjab, Pakistan</span>
             </div>
           </div>
 

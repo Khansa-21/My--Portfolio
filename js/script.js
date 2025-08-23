@@ -6,20 +6,22 @@ window.addEventListener("load", () => {
 
 //👉 Dark/Light Mode
 let Mode = document.querySelector(".bx-moon");
-let Mode2 = document.querySelector(".bx-sun");
+let ModeIcons = document.querySelectorAll(".bx-sun"); // multiple .bx-sun
 let Mode3 = document.querySelector("video");
-Mode2.onclick = function () {
-  document.body.classList.toggle("mode");
-  if (document.body.classList.contains("mode")) {
-    Mode3.src = "./assets/bg-video.mp4";
-    // Mode.classList.replace("bx-moon", "bx-sun");
-    // mode = <i class="bx bx-sun" id="icon"></i>;
-  } else {
-    Mode3.src = "./assets/bg-video2.mp4";
-    // Mode.classList.replace("bx-sun", "bx-moon");
-    // mode = <i class="bx bx-moon" id="icon" id="moon"></i>;
-  }
-};
+
+ModeIcons.forEach((Mode2) => {
+  Mode2.onclick = function () {
+    document.body.classList.toggle("mode");
+
+    if (document.body.classList.contains("mode")) {
+      Mode3.src = "./assets/bg-video.mp4";
+      // Mode.classList.replace("bx-moon", "bx-sun");
+    } else {
+      Mode3.src = "./assets/bg-video2.mp4";
+      // Mode.classList.replace("bx-sun", "bx-moon");
+    }
+  };
+});
 
 // 👉 Animated Counter (for Experience, Satisfaction, etc.)
 const counters = document.querySelectorAll(".stat-number");
@@ -50,10 +52,14 @@ let index = 0;
 let charIndex = 0;
 let isDeleting = false;
 
+const professionElements = document.querySelectorAll(".profession");
+
 function typeEffect() {
   const currentText = profession[index];
   const display = currentText.substring(0, charIndex);
-  document.getElementById("profession").innerText = display;
+  professionElements.forEach((el) => {
+    el.innerText = display;
+  });
 
   if (!isDeleting && charIndex < currentText.length) {
     charIndex++;
@@ -170,4 +176,12 @@ form.addEventListener("submit", async function (e) {
   } else {
     status.innerHTML = "❌ Oops! Something went wrong. Try again!";
   }
+});
+
+// 👉 mbl nav
+const menu = document.querySelector(".bx-menu");
+const menuIcons = document.querySelector(".menu-icons");
+
+menu.addEventListener("click", () => {
+  menuIcons.classList.toggle("show-menu");
 });

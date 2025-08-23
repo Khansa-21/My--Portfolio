@@ -37,8 +37,8 @@ body {
 
 /* ========== PRELOADER ========== */
 #preloader {
-  background: black url(assets/prelaoder.gif) no-repeat center center;
-  background-size: 8%;
+  background: black url(/assets/preloader.gif) no-repeat center center;
+  background-size: 6%;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -50,6 +50,35 @@ video {
   width: 100%;
   position: fixed;
   z-index: -1;
+  height: fit-content;
+}
+
+/* ========== NAVIGATION FOR MBL ========== */
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  box-shadow: 2px 2px 5px var(--primary-color);
+  display: none;
+  z-index: 10;
+  background-color: var(--secondary-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.menu-icons {
+  display: none;
+}
+
+.show-menu {
+  display: block;
 }
 
 /* ========== ICON SIDEBAR ========== */
@@ -114,7 +143,7 @@ video {
 .carasouel {
   height: 200px;
   border-radius: 20px 0 0 0;
-  background-image: url(assets/Frontend.png);
+  background-image: url(/assets/Frontend.png);
   background-size: cover;
   background-position: center;
   transition: 5s;
@@ -156,7 +185,7 @@ video {
   text-align: center;
 }
 
-#profession {
+.profession {
   font-size: 21px;
   color: purple;
   margin-top: 10px;
@@ -341,9 +370,10 @@ main {
   flex-wrap: wrap;
   gap: 30px;
 }
-
+.marg {
+  margin-right: 30px;
+}
 .tech-item {
-  border: 1px groove hsl(0, 1%, 28%);
   margin-top: 20px;
   border-radius: 20px;
   margin-left: 40px;
@@ -361,7 +391,6 @@ main {
   background: var(--third-color);
   border-radius: 10px;
   margin-bottom: 10px;
-  border: 1px groove hsl(0, 3%, 80%);
 }
 
 .progress-count {
@@ -418,9 +447,9 @@ main {
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* pehli row me 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-items: center; /* items ko center me align karega */
+  justify-items: center;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -668,6 +697,10 @@ p {
   border-radius: 20px;
 }
 
+.marg-lt {
+  margin-left: 20px;
+}
+
 /* =========== MAP =========== */
 iframe {
   padding: 40px;
@@ -716,24 +749,248 @@ footer {
 }
 
 /* =========== RESPONSIVE ============ */
-@media (max-width: 768px) {
-  .layout {
-    width: 100%;
-    position: relative;
-    right: 0;
+@media (max-width: 700px) {
+  video {
+    display: none;
   }
-
+  body {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #8c53e7, #c4b5fd);
+  }
+  .nav {
+    display: block;
+    width: 100%;
+  }
+  .body {
+    width: 100%;
+    display: block;
+    margin: 0;
+    /* overflow: hidden; */
+    /* padding: 10px; */
+  }
+  .icons {
+    display: none;
+  }
   .image_section {
+    left: 0;
     position: relative;
     width: 100%;
-    left: 0;
   }
-
-  .count {
-    grid-template-columns: 1fr;
+  .image_section,
+  .carasouel,
+  .layout {
+    border-radius: 0px;
   }
-
-  .about p {
+  main {
     width: 100%;
+    margin-left: 0;
+  }
+  .main_scroll h2 {
+    font-size: 20px;
+  }
+  .main_scroll h1 {
+    font-size: 28px;
+  }
+  .main_scroll p {
+    font-size: 16px;
+    width: 100%;
+    line-height: 25px;
+  }
+  .about {
+    margin-left: 10px;
+  }
+  .count {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    padding: 20px;
+    width: 45%;
+  }
+  .stat-number {
+    font-size: 28px;
+  }
+  .code-snippet {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .tech-item {
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+  }
+  .tech-list {
+    margin: 0;
+    padding: 0;
+  }
+  .progress-count {
+    font-size: 12px;
+  }
+  .stack {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 20px;
+  }
+  .tool-1 {
+    width: 140px;
+    height: 140px;
+  }
+  .tool-icons {
+    width: 35px;
+  }
+  .tool-1 p,
+  .tool-1 .stat-number {
+    margin: 0px;
+  }
+  .carasouel-cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0px;
+    gap: 0px;
+    height: fit-content;
+    padding: 0px;
+  }
+  .card {
+    height: 100px;
+    width: 95%;
+    transition: height 0.5s ease, bottom 0.8s ease-in-out;
+    padding: 0px;
+  }
+  .card.active {
+    height: 450px;
+    width: 95%;
+  }
+  .clones {
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+  }
+  .vrtcl {
+    writing-mode: horizontal-tb;
+    /* letter-spacing: 40px; */
+    text-orientation: upright;
+    font-size: 26px;
+    font-weight: bold;
+    color: palevioletred;
+    text-align: center;
+  }
+  .youtube,
+  .spotify {
+    height: fit-content;
+  }
+  .spotify {
+    margin-right: 0px;
+  }
+  .contact,
+  .contact-info {
+    width: 100%;
+  }
+  .row-1 {
+    flex-direction: column;
+    padding: 10px;
+  }
+  iframe {
+    margin-left: 0px;
+    width: 100%;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  video {
+    display: none;
+  }
+  body,
+  .body {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: linear-gradient(135deg, #8c53e7, #c4b5fd);
+  }
+  .icons {
+    order: 1;
+  }
+  .image_section {
+    order: 2;
+    flex: 0 0 80%;
+    position: relative;
+    width: 60%;
+  }
+  .carasouel {
+    display: none;
+  }
+  .img {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 27%;
+    transform: translate(0px, 0px);
+  }
+  main {
+    order: 3;
+    flex: 0 0 80%;
+    margin-left: 85px;
+    width: 60%;
+  }
+  .about p {
+    width: 80%;
+  }
+  .count {
+    width: 90%;
+  }
+  .stat-card {
+    width: 140px;
+  }
+  .code-snippet {
+    width: 250px;
+  }
+  .tech {
+    width: 90%;
+  }
+  .marg {
+    margin-right: 0px;
+  }
+  .tool-1 {
+    width: 180px;
+    height: 180px;
+  }
+  .carasouel-cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0px;
+    gap: 0px;
+    height: fit-content;
+    padding: 0px;
+  }
+  .card {
+    height: 100px;
+    width: 95%;
+    transition: height 0.5s ease, bottom 0.8s ease-in-out;
+    padding: 0px;
+  }
+  .card.active {
+    height: 450px;
+    width: 95%;
+  }
+  .youtube,
+  .spotify {
+    height: fit-content;
+  }
+  .row-1 {
+    padding: 10px;
+  }
+  iframe {
+    margin-left: 0px;
+    width: 90%;
   }
 }
